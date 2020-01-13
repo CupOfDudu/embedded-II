@@ -180,11 +180,16 @@ void setup() {
   lcd.backlight();
   lcd.setCursor(0, 0);
   lcd.print("My Name");
-  lcd.setCursor(1, 0);
+  delay(1000);
+  lcd.setCursor(0, 1);
   lcd.print("Partner Name");
   delay(1000);
-  for (int i = 10; i >= 0; i--) {
+  lcd.clear();
+  
+  for (int i = 10; i >= 0; i= i-1) {
     int countdown = i;
+    lcd.setCursor(0, 0);
+    lcd.clear();
     lcd.print(countdown);
     delay(1000);
   }
